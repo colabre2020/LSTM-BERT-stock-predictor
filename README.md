@@ -4,7 +4,8 @@ An enterprise-grade stock price prediction system that combines BERT and LSTM mo
 
 # Architecture
 
-![image](https://github.com/user-attachments/assets/26df31da-7f44-4cd7-8830-2d232a5f7a80)
+![image](https://github.com/user-attachments/assets/0f87c68e-0724-4535-b2cd-d0e90fe0481e)
+
 
 
 ## Features
