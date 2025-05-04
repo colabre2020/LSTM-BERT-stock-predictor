@@ -1,0 +1,15 @@
+version: "3.9"
+services:
+  backend:
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app
+    environment:
+      - MODEL_PATH=models/lstm_model.h5
+
+  frontend:
+    build: ./frontend
+    ports:
+      - "3000:3000"
