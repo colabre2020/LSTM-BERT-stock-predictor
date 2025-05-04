@@ -2,6 +2,11 @@
 
 An enterprise-grade stock price prediction system that combines BERT and LSTM models, optimized for Apple Silicon (MPS) GPU acceleration, with a secure dashboard and vector database integration.
 
+# Architecture
+
+![image](https://github.com/user-attachments/assets/26df31da-7f44-4cd7-8830-2d232a5f7a80)
+
+
 ## Features
 
 - Combined BERT-LSTM model for advanced stock price prediction
