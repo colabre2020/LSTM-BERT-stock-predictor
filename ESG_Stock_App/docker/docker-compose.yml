@@ -1,0 +1,93 @@
+version: '3.8'
+
+services:
+  esg-stock-predictor:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    volumes:
+      - ..:/app
+      - model-data:/app/models/saved
+      - ../STOCK_PRICE _TOP_50.xlsx:/app/data/STOCK_PRICE_TOP_50.xlsx
+    ports:
+      - "5000:5000"
+    environment:
+      - ENV_FILE=.env
+      - TORCH_DEVICE=mps
+      - WEAVIATE_URL=http://weaviate:8080
+      - PYTHONPATH=/app
+      - FLASK_ENV=development
+    depends_on:
+      - neo4j
+      - weaviate
+    deploy:
+      resources:
+        limits:
+          cpus: '4'
+          memory: 8G
+        reservations:
+          cpus: '2'
+          memory: 4G
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  neo4j:
+    image: neo4j:latest
+    ports:
+      - "7474:7474"
+      - "7687:7687"
+    environment:
+      - NEO4J_AUTH=neo4j/password
+      - NEO4J_apoc_export_file_enabled=true
+      - NEO4J_apoc_import_file_enabled=true
+      - NEO4J_dbms_security_procedures_unrestricted=apoc.*
+    volumes:
+      - neo4j-data:/data
+      - neo4j-logs:/logs
+    deploy:
+      resources:
+        limits:
+          cpus: '2'
+          memory: 4G
+
+  weaviate:
+    image: semitechnologies/weaviate:latest
+    ports:
+      - "8080:8080"
+    environment:
+      - QUERY_DEFAULTS_LIMIT=25
+      - AUTHENTICATION_ANONYMOUS_ACCESS_ENABLED=true
+      - PERSISTENCE_DATA_PATH=/var/lib/weaviate
+      - DEFAULT_VECTORIZER_MODULE=text2vec-contextionary
+      - ENABLE_MODULES=text2vec-contextionary
+      - CONTEXTIONARY_URL=contextionary:9999
+    volumes:
+      - weaviate-data:/var/lib/weaviate
+    depends_on:
+      - contextionary
+    deploy:
+      resources:
+        limits:
+          cpus: '2'
+          memory: 4G
+
+  contextionary:
+    image: semitechnologies/contextionary:en0.16.0-v1.0.2
+    environment:
+      OCCURRENCE_WEIGHT_LINEAR_FACTOR: 0.75
+      EXTENSIONS_STORAGE_MODE: weaviate
+      EXTENSIONS_STORAGE_ORIGIN: http://weaviate:8080
+    deploy:
+      resources:
+        limits:
+          cpus: '1'
+          memory: 2G
+
+volumes:
+  neo4j-data:
+  neo4j-logs:
+  weaviate-data:
+  model-data:
