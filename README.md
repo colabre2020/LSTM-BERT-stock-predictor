@@ -8,7 +8,6 @@ An enterprise-grade stock price prediction system that combines BERT and LSTM mo
 
 # Application Mocks
 
-![image](https://github.com/user-attachments/assets/058c7688-d413-42b2-848b-a6f9ca6d52b3)
 
 ![image](https://github.com/user-attachments/assets/95b39d3e-6a47-40e1-a85e-9aa58b48a7cd)
 
