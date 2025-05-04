@@ -167,9 +167,8 @@ For production deployment:
 5. Set up monitoring and logging
 
 ## License
-
-[Your License]
+Copyright Protected, need permission from the researchers
 
 ## Contributing
 
-[Contributing Guidelines]
+If you want to contribute to this project, let's know.
