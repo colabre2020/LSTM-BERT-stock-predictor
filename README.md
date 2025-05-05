@@ -1,6 +1,6 @@
 # Stock Price Prediction RAG Application with BERT + LSTM Models
 
-An enterprise-grade stock price prediction system that combines BERT and LSTM models, optimized for Apple Silicon (MPS) GPU acceleration, with a secure dashboard and vector database integration.
+Stock Price Predictor is a next-generation, enterprise-ready solution for predicting stock price movements using advanced AI. By combining insights from financial news with market data, it leverages state-of-the-art machine learning — specifically BERT for text analysis and LSTM for historical trend forecasting — to generate high-confidence predictions. Optimized for Apple’s latest hardware, the platform delivers fast, efficient performance, even in edge environments. A secure, user-friendly dashboard offers real-time analytics and intuitive visualizations. Integrated with a vector database, the system also supports intelligent information retrieval, making it valuable for investment research, risk assessment, and strategic decision-making.
 
 # Solution Architecture
 
