@@ -4,7 +4,7 @@ Stock Price Predictor is a next-generation, enterprise-ready solution for predic
 
 # Solution Architecture
 
-![image](https://github.com/user-attachments/assets/c6e331e3-6923-4bfa-bf3d-15475205c079)
+![image](https://github.com/user-attachments/assets/407f8c4b-9295-4bfe-951a-dc8592e35a65)
 
 
 
