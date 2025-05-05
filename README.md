@@ -1,4 +1,4 @@
-# Stock Price Prediction System with BERT-LSTM
+# Stock Price Prediction RAG Application with BERT + LSTM Models
 
 An enterprise-grade stock price prediction system that combines BERT and LSTM models, optimized for Apple Silicon (MPS) GPU acceleration, with a secure dashboard and vector database integration.
 
