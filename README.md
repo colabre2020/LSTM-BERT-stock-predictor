@@ -184,3 +184,11 @@ Copyright Protected, need permission from the researchers
 ## Contributing
 
 If you want to contribute to this project, let's know.
+
+## Reference
+BERT - https://doi.org/10.48550/arXiv.1810.04805 
+LSTM - https://doi.org/10.1162/neco.1997.9.8.1735
+https://doi.org/10.1080/20430795.2024.2377551 
+Weaviate - https://weaviate.io/blog 
+LSTM - https://developer.nvidia.com/discover/lstm#:~:text=A%20Long%20short%2Dterm%20memory,cycles%20through%20the%20feedback%20loops 
+
