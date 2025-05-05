@@ -88,7 +88,7 @@ Edit `config.yaml` to customize:
 ### Directory Structure
 
 ```
-esg-stock-predictor/
+LSTM-BERT stock-predictor/
 ├── config.yaml           # Configuration file
 ├── requirements.txt      # Python dependencies
 ├── data/                # Data storage
