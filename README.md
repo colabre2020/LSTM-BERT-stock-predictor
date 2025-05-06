@@ -20,7 +20,8 @@ This research presents the development of an enterprise-grade stock price predic
 # Application Mocks
 
 
-![image](https://github.com/user-attachments/assets/95b39d3e-6a47-40e1-a85e-9aa58b48a7cd)
+![04DF3B87-F78B-467B-B4F0-7DAD7334506C_1_105_c](https://github.com/user-attachments/assets/4f742c18-b986-49cd-ae38-ab6b1d6185b4)
+
 
 
 ## Features
