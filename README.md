@@ -193,7 +193,7 @@ Copyright Protected, need permission from the researchers
 
 ## Contributing
 
-If you want to contribute to this project, let's know.
+If you want to contribute to this project, Let's connect. email - spand14@unh.newhaven.edu
 
 ## Reference
 
