@@ -48,7 +48,7 @@ This research presents the development of an enterprise-grade stock price predic
 1. Clone the repository:
 ```bash
 git clone <repository-url>
-cd esg-stock-predictor
+cd LSTM-BERT-stock-predictor
 ```
 
 2. Create a virtual environment (optional but recommended):
