@@ -1,0 +1,63 @@
+# API Configuration
+api:
+  host: "localhost"
+  port: 8000
+  debug: true
+  secret_key: "your-secret-key-here"
+
+# Dashboard Configuration
+dashboard:
+  host: "localhost"
+  port: 8051  # Changed port to avoid conflicts
+  debug: true
+  secret_key: "your-dashboard-secret-key"
+
+# Data Configuration
+data:
+  excel_path: "data/STOCK_PRICE_TOP_50.xlsx"
+  window_size: 42
+  batch_size: 32
+  train_split: 0.7
+  val_split: 0.15
+  num_workers: 4
+  stock_data_path: 'data/STOCK_PRICE_TOP_50.xlsx'
+  text_data_path: 'data/news_articles.csv'
+
+# Model Configuration
+model:
+  save_path: "models/saved/bert_lstm_model.h5"
+  bert:
+    pretrained_model: 'bert-base-uncased'
+    hidden_size: 768
+    num_attention_heads: 12
+    max_length: 512
+  lstm:
+    hidden_size: 128
+    num_layers: 2
+    dropout: 0.2
+  training:
+    learning_rate: 0.001
+    epochs: 50
+    early_stopping_patience: 5
+    scheduler_patience: 10
+    scheduler_factor: 0.5
+    use_threading: true
+    thread_count: 4
+
+training:
+  batch_size: 32
+  learning_rate: 0.001
+  epochs: 10
+  validation_split: 0.2
+
+# Weaviate Configuration
+weaviate:
+  url: "http://localhost:8080"
+  api_key: ""  # Add your Weaviate API key if using authentication
+  batch_size: 100
+  schema_class_name: 'StockPrediction'
+
+# Device Configuration
+device:
+  type: "mps"  # Can be "mps", "cuda", or "cpu"
+  fallback_order: ["mps", "cuda", "cpu"]
