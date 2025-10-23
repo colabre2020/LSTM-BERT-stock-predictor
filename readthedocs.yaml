@@ -1,0 +1,75 @@
+# Read the Docs configuration file for LSTM-BERT Stock Predictor
+# See https://docs.readthedocs.io/en/stable/config-file/v2.html for details
+
+# Required
+version: 2
+
+# Set the OS, Python version and other tools you might need
+build:
+  os: ubuntu-22.04
+  tools:
+    python: "3.9"
+    # nodejs: "18"  # Uncomment if you need Node.js for frontend components
+
+# Build documentation in the "docs/" directory with Sphinx
+sphinx:
+  configuration: docs/conf.py
+  # You can also specify the builder explicitly
+  # builder: html
+  # Optionally build your docs in additional formats such as PDF and ePub
+  # formats:
+  #   - pdf
+  #   - epub
+
+# Optionally build your docs with MkDocs
+# mkdocs:
+#   configuration: mkdocs.yml
+
+# Python dependencies for LSTM-BERT Stock Predictor
+python:
+  install:
+    - requirements: docs/requirements.txt
+    # Install the main project dependencies (for API documentation)
+    - requirements: requirements.txt
+    # Install your package in development mode
+    - method: pip
+      path: .
+    # Alternative: Install from setup.py if you have one
+    # - method: setuptools
+    #   path: .
+
+# Optional but recommended, serve the docs from a subdirectory
+# This is useful if you have multiple documentation sites
+# submodules:
+#   include: all
+
+# Specify which formats you'd like your docs built in.
+# Possible values are html, pdf, epub, and htmlzip
+# formats:
+#   - pdf
+#   - epub
+
+# Optional: Set a canonical URL for your documentation
+# This helps with SEO and prevents duplicate content issues
+# canonical_url: https://your-project.readthedocs.io/
+
+# Configure search functionality for ML documentation
+search:
+  ranking:
+    api/reference/*: -1
+    tutorial/*: 2
+    models/*: 1
+    architecture/*: 1
+    quickstart/*: 3
+
+# Optional: Configure redirects
+# redirects:
+#   filename: html_filename
+
+# Optional: Configure analytics
+# analytics:
+#   google_analytics_id: G-XXXXXXXXXX
+
+# Optional: Configure social cards
+# social_cards:
+#   enable: true
