@@ -1,0 +1,118 @@
+/* Custom CSS for LSTM-BERT Stock Predictor Documentation */
+
+/* Custom color scheme */
+:root {
+    --primary-color: #2980B9;
+    --secondary-color: #27AE60;
+    --accent-color: #F39C12;
+    --text-color: #2C3E50;
+    --bg-color: #ECF0F1;
+}
+
+/* Header customization */
+.wy-nav-top {
+    background-color: var(--primary-color);
+}
+
+/* Sidebar customization */
+.wy-side-nav-search {
+    background-color: var(--primary-color);
+}
+
+.wy-side-nav-search > a {
+    color: #ffffff;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+/* Code blocks */
+.highlight {
+    border-left: 4px solid var(--secondary-color);
+    margin: 1em 0;
+}
+
+/* Admonitions */
+.admonition.note {
+    border-left: 4px solid var(--primary-color);
+}
+
+.admonition.warning {
+    border-left: 4px solid var(--accent-color);
+}
+
+.admonition.important {
+    border-left: 4px solid var(--secondary-color);
+}
+
+/* API documentation styling */
+.py.method, .py.function, .py.class {
+    border-left: 3px solid var(--secondary-color);
+    padding-left: 10px;
+    margin: 1em 0;
+}
+
+/* Tables */
+table.docutils {
+    border-collapse: collapse;
+    margin: 1em 0;
+}
+
+table.docutils th {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 8px 12px;
+}
+
+table.docutils td {
+    padding: 6px 12px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Links */
+a {
+    color: var(--primary-color);
+}
+
+a:hover {
+    color: var(--secondary-color);
+}
+
+/* Custom badges for ML concepts */
+.ml-badge {
+    display: inline-block;
+    padding: 2px 8px;
+    background-color: var(--secondary-color);
+    color: white;
+    border-radius: 12px;
+    font-size: 0.8em;
+    margin: 2px;
+}
+
+.bert-badge {
+    background-color: #E74C3C;
+}
+
+.lstm-badge {
+    background-color: #9B59B6;
+}
+
+.api-badge {
+    background-color: var(--accent-color);
+}
+
+/* Code highlighting for Python */
+.highlight .k { color: #0000ff; } /* Keywords */
+.highlight .s { color: #008000; } /* Strings */
+.highlight .c { color: #808080; } /* Comments */
+.highlight .n { color: #000000; } /* Names */
+
+/* Responsive improvements */
+@media screen and (max-width: 768px) {
+    .wy-nav-content {
+        padding: 1em;
+    }
+    
+    .highlight {
+        font-size: 0.9em;
+    }
+}

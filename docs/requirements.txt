@@ -1,0 +1,35 @@
+# Documentation-specific requirements for LSTM-BERT Stock Predictor
+# These are lighter dependencies needed only for building docs
+
+# Core Sphinx packages
+sphinx>=6.0.0
+sphinx-rtd-theme>=1.3.0
+sphinx-autodoc-typehints>=1.24.0
+sphinx-copybutton>=0.5.0
+
+# For API documentation
+sphinxcontrib-napoleon>=0.7
+sphinxcontrib-apidoc>=0.3.0
+
+# For Markdown support (if needed)
+myst-parser>=2.0.0
+recommonmark>=0.7.1
+
+# For code syntax highlighting
+pygments>=2.15.0
+
+# For generating documentation from docstrings
+sphinx-autoapi>=2.1.0
+
+# For better formatting
+sphinx-tabs>=3.4.0
+sphinx-design>=0.5.0
+
+# Lightweight versions of ML libraries for documentation
+# (to avoid heavy dependencies in docs build)
+numpy>=1.21.0,<1.25.0  # Compatible range to avoid conflicts
+pandas>=1.5.0,<2.1.0   # For any data structure docs
+
+# Note: Heavy ML dependencies like torch, transformers, etc. 
+# should be mocked in conf.py using autodoc_mock_imports
+# to avoid installation issues during documentation builds
